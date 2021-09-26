@@ -18,19 +18,27 @@
 	</properties>
 	<repositories>
 		<repository>
-			<id>public</id>
+			<id>nexus-daocloud</id>
+			<name>Nexus daocloud</name>
+			<url>http://nexus.daocloud.io/repository/maven-public/</url>
+		</repository>
+		<repository>
+			<id>aliyun</id>
 			<name>aliyun</name>
-			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-				<checksumPolicy>fail</checksumPolicy>
-			</snapshots>
+			<url>https://maven.aliyun.com/repository/public</url>
 		</repository>
 	</repositories>
+
+	<pluginRepositories>
+		<!-- the group properties -->
+		<pluginRepository>
+			<!-- the group properties -->
+			<id>aliyun</id>
+			<name>aliyun</name>
+			<url>https://maven.aliyun.com/repository/public</url>
+		</pluginRepository>
+	</pluginRepositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
